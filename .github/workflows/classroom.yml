@@ -13,20 +13,20 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Lesson_1_test
-      id: lesson_1_test
+    - name: Lesson2
+      id: lesson2
       uses: classroom-resources/autograding-io-grader@v1
       with:
-        test-name: Lesson_1_test
+        test-name: Lesson2
         setup-command: ''
-        command: "./main.py"
-        input: 1+1
-        expected-output: '2'
+        command: python3 main.py
+        input: 1+2
+        expected-output: '3'
         comparison-method: exact
-        timeout: 1
+        timeout: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        LESSON_1_TEST_RESULTS: "${{steps.lesson_1_test.outputs.result}}"
+        LESSON2_RESULTS: "${{steps.lesson2.outputs.result}}"
       with:
-        runners: lesson_1_test
+        runners: lesson2
