@@ -5,3 +5,9 @@ sum = 0
 for i in range(0, 6):
     sum += arr[i]
 print(sum)
+
+```python
+print("Hello, world!")
+for i in range(10):
+    print(i)
+```
