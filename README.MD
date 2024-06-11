@@ -6,5 +6,5 @@ for i in range(0, 6):
     sum += arr[i]
 print(sum)
 ```
-
+ответ записать в файле main.py после комментария
 
